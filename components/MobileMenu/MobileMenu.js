@@ -9,160 +9,160 @@ const menus = [
         id: 1,
         title: 'Home',
         link: '/home',
-        submenu: [
-            {
-                id: 11,
-                title: 'Home style 1',
-                link: '/'
-            },
-            {
-                id: 12,
-                title: 'Home style 2',
-                link: '/home-2'
-            },
-            {
-                id: 13,
-                title: 'Home style 3',
-                link: '/home-3'
-            },
-            {
-                id: 14,
-                title: 'Home style 4',
-                link: '/home-4'
-            }
-        ]
+        // submenu: [
+        //     {
+        //         id: 11,
+        //         title: 'Home style 1',
+        //         link: '/'
+        //     },
+        //     {
+        //         id: 12,
+        //         title: 'Home style 2',
+        //         link: '/home-2'
+        //     },
+        //     {
+        //         id: 13,
+        //         title: 'Home style 3',
+        //         link: '/home-3'
+        //     },
+        //     {
+        //         id: 14,
+        //         title: 'Home style 4',
+        //         link: '/home-4'
+        //     }
+        // ]
     },
    
     {
         id: 3,
-        title: 'Pages',
-        link: '/',
-        submenu: [
-            {
-                id: 30,
-                title: 'About',
-                link: '/about',
-            },
-            {
-                id: 31,
-                title: 'Gallery',
-                link: '/gallery',
-            },
-            {
-                id: 32,
-                title: 'Testimonial',
-                link: '/testimonial',
-            },
-            {
-                id: 33,
-                title: 'Causes Style 1',
-                link: '/causes',
-            },
-            {
-                id: 34,
-                title: 'Causes Style 2',
-                link: '/causes-s2',
-            },
-            {
-                id: 35,
-                title: 'Causes Style 3',
-                link: '/causes-s3',
-            },
-            {
-                id: 36,
-                title: 'Causes Single',
-                link: '/causes-single/The-Thirsty-are-Waiting-For-Your-Help',
-            },
-            {
-                id: 37,
-                title: 'Volunteer',
-                link: '/volunteer',
-            },
-            {
-                id: 38,
-                title: 'Volunteer Single',
-                link: '/volunteer-single',
-            },
-            {
-                id: 39,
-                title: 'Service',
-                link: '/service',
-            },
-            {
-                id: 310,
-                title: 'Service Single',
-                link: '/service-single/Kids-Education',
-            },
-            {
-                id: 310,
-                title: '404 Error',
-                link: '/404',
-            },
-        ]
+        title: 'About',
+        link: '/about',
+        // submenu: [
+        //     {
+        //         id: 30,
+        //         title: 'About',
+        //         link: '/about',
+        //     },
+        //     {
+        //         id: 31,
+        //         title: 'Gallery',
+        //         link: '/gallery',
+        //     },
+        //     {
+        //         id: 32,
+        //         title: 'Testimonial',
+        //         link: '/testimonial',
+        //     },
+        //     {
+        //         id: 33,
+        //         title: 'Causes Style 1',
+        //         link: '/causes',
+        //     },
+        //     {
+        //         id: 34,
+        //         title: 'Causes Style 2',
+        //         link: '/causes-s2',
+        //     },
+        //     {
+        //         id: 35,
+        //         title: 'Causes Style 3',
+        //         link: '/causes-s3',
+        //     },
+        //     {
+        //         id: 36,
+        //         title: 'Causes Single',
+        //         link: '/causes-single/The-Thirsty-are-Waiting-For-Your-Help',
+        //     },
+        //     {
+        //         id: 37,
+        //         title: 'Volunteer',
+        //         link: '/volunteer',
+        //     },
+        //     {
+        //         id: 38,
+        //         title: 'Volunteer Single',
+        //         link: '/volunteer-single',
+        //     },
+        //     {
+        //         id: 39,
+        //         title: 'Service',
+        //         link: '/service',
+        //     },
+        //     {
+        //         id: 310,
+        //         title: 'Service Single',
+        //         link: '/service-single/Kids-Education',
+        //     },
+        //     {
+        //         id: 310,
+        //         title: '404 Error',
+        //         link: '/404',
+        //     },
+        // ]
     },
     {
         id: 4,
-        title: 'Donations',
+        title: 'Donate',
         link: '/donate',
     },
 
-    {
-        id: 5,
-        title: 'Events',
-        link: '/events',
-        submenu: [
-            {
-                id: 51,
-                title: 'Events',
-                link: '/event',
-            },
+    // {
+    //     id: 5,
+    //     title: 'Events',
+    //     link: '/events',
+    //     submenu: [
+    //         {
+    //             id: 51,
+    //             title: 'Events',
+    //             link: '/event',
+    //         },
            
-            {
-                id: 52,
-                title: 'Events single',
-                link: '/event-single/Solve-the-Water-Problem-of-World'
-            },
+    //         {
+    //             id: 52,
+    //             title: 'Events single',
+    //             link: '/event-single/Solve-the-Water-Problem-of-World'
+    //         },
           
-        ]
-    },
+    //     ]
+    // },
 
-    {
-        id: 6,
-        title: 'Blog',
-        link: '/blog',
-        submenu: [
-            {
-                id: 61,
-                title: 'Blog',
-                link: '/blog'
-            },
-            {
-                id: 62,
-                title: 'Blog Left sidebar',
-                link: '/blog-left-sidebar'
-            },
-            {
-                id: 63,
-                title: 'Blog full width',
-                link: '/blog-fullwidth'
-            },
-            {
-                id: 64,
-                title: 'Blog single',
-                link: '/blog-single/Your-clothes-give-them-a-warm-hug.'
-            },
-            {
-                id: 65,
-                title: 'Blog single Left sidebar',
-                link: '/blog-single-left-sidebar/Your-clothes-give-them-a-warm-hug.'
-            },
-            {
-                id: 66,
-                title: 'Blog single Left sidebar',
-                link: '/blog-single-fullwidth/Your-clothes-give-them-a-warm-hug.'
-            },
-        ]
-    },
+    // {
+    //     id: 6,
+    //     title: 'Blog',
+    //     link: '/blog',
+    //     submenu: [
+    //         {
+    //             id: 61,
+    //             title: 'Blog',
+    //             link: '/blog'
+    //         },
+    //         {
+    //             id: 62,
+    //             title: 'Blog Left sidebar',
+    //             link: '/blog-left-sidebar'
+    //         },
+    //         {
+    //             id: 63,
+    //             title: 'Blog full width',
+    //             link: '/blog-fullwidth'
+    //         },
+    //         {
+    //             id: 64,
+    //             title: 'Blog single',
+    //             link: '/blog-single/Your-clothes-give-them-a-warm-hug.'
+    //         },
+    //         {
+    //             id: 65,
+    //             title: 'Blog single Left sidebar',
+    //             link: '/blog-single-left-sidebar/Your-clothes-give-them-a-warm-hug.'
+    //         },
+    //         {
+    //             id: 66,
+    //             title: 'Blog single Left sidebar',
+    //             link: '/blog-single-fullwidth/Your-clothes-give-them-a-warm-hug.'
+    //         },
+    //     ]
+    // },
     {
         id: 88,
         title: 'Contact',

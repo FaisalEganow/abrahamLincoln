@@ -86,12 +86,12 @@ const TestimonialSection = (props) => {
                                         </div>
                                     </div>
                                     <div className="bottom-content">
-                                        <div className="image">
+                                        {/* <div className="image">
                                             <Image src={Testimonial.image} alt="" />
-                                        </div>
+                                        </div> */}
                                         <div className="text">
                                             <h3>{Testimonial.title}</h3>
-                                            <span>{Testimonial.subtitle}</span>
+                                            {/* <span>{Testimonial.subtitle}</span> */}
                                         </div>
                                     </div>
                                 </div>
