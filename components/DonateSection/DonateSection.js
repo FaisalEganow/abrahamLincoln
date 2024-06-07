@@ -12,6 +12,7 @@ import axios from "axios";
 const DonateSection = () => {
 
     const BASE_URL = 'https://eganow-mc-checkout.vercel.app/api/credentials'
+    const [loading,setLoading] = useState(false)
 
     const [ip, setIP] = useState("");
     const [paymentMethod, setPaymentMethod] = useState('card');
@@ -49,8 +50,9 @@ const DonateSection = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault();
+        setLoading(true)
         const postData = {
-            payerInfo : {
+            payer : {
                 first_name : formData.firstName,
                 last_name : formData.lastName,
                 email : formData.email,
@@ -65,11 +67,12 @@ const DonateSection = () => {
             const sendRequest = await axios.post(`${BASE_URL}` ,postData)
             if(sendRequest.data.public_key){
                 window.location.href = `https://eganow-mc-checkout.vercel.app/${sendRequest.data.public_key}`
+                setLoading(false)
 
             }
-            // console.log(sendRequest.data.public_key);
         } catch (error) {
             console.log(error);
+            setLoading(false)
         }
         // console.log(postData)
         // setFormData({})
@@ -106,7 +109,11 @@ const DonateSection = () => {
                             </div>
                            
                             <div className="submit-area">
-                                <button type="submit" className="theme-btn submit-btn">Donate Now</button>
+                                <button type="submit" disabled={loading} className="theme-btn submit-btn">
+                                    {
+                                        loading ? 'Processing' : 'Donate now'
+                                    }
+                                </button>
                             </div>
                         </form>
                     </div>
