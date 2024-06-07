@@ -59,14 +59,15 @@ const DonateSection = () => {
                 mobile_number : formData.phone,
             },
             customer_id : "4BDFB5479C224EE9",
-            callback_url : "https://localhost:3000",
+            callback_url : "http://localhost:3002/payment_status",
             amount : formData.amount,
             ip_address : ip
         }
         try {
             const sendRequest = await axios.post(`${BASE_URL}` ,postData)
             if(sendRequest.data.public_key){
-                window.location.href = `https://eganow-mc-checkout.vercel.app/${sendRequest.data.public_key}`
+                const checkoutUrl = `https://eganow-mc-checkout.vercel.app/${sendRequest.data.public_key}`;
+                window.open(checkoutUrl, '_blank');
                 setLoading(false)
 
             }
