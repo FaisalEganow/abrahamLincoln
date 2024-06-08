@@ -36,7 +36,7 @@ const Hero = () => {
                                 <div className="slide-video-text">
                                     <h4 style={{color:"#7bc676"}}>Join Our Upcoming Campaign</h4>
                                     <p>Make an impact one piece of clothing at a time to need of others.</p>
-                                    <Link href="https://wa.me/+233261965074" target="_blank" className="theme-btn my-3">Join us now</Link>
+                                    <Link href="/donate" className="theme-btn my-3">Donate Now</Link>
                                 </div>
                             </div>
                             <div className="charius-pic">
