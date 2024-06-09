@@ -108,7 +108,7 @@ const DonateSection = () => {
                 email: formData.email,
                 mobile_number: formData.phone,
             },
-            customer_id: "59B4F9195EC84D99",
+            customer_id: "4BDFB5479C224EE9",
             callback_url: "http://localhost:3002/payment_status",
             amount: formData.amount,
             ip_address: ip,
