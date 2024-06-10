@@ -76,9 +76,9 @@ const Footer = (props) => {
                                 </div>
                                 <ul>
                                     <li><Link onClick={ClickHandler} href="/home">Home</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/bout">About Us</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/service">Donate</Link></li>
-                                    <li><Link onClick={ClickHandler} href="/volunteer">Volunteer</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/about">About Us</Link></li>
+                                    <li><Link onClick={ClickHandler} href="/donate">Donate</Link></li>
+                                    {/* <li><Link onClick={ClickHandler} href="/volunteer">Volunteer</Link></li> */}
                                     <li><Link onClick={ClickHandler} href="/contact">Contact</Link></li>
                                 </ul>
                             </div>
@@ -104,7 +104,7 @@ const Footer = (props) => {
                                 <ul className="info">
                                     <li className='d-flex'><i className="flaticon-email"></i> abrahamyeswecan@ymail.com</li>
                                     <li><i className="flaticon-telephone"></i>+233 243 050 630</li>
-                                    <li><i className="flaticon-location"></i> 19 Thordge Shiloh,Hawai 863</li>
+                                    <li><i className="flaticon-location"></i>N°48 Osu Badu Street, Dzorwulo, Accra.  P.O.Box GP 22628</li>
                                 </ul>
                             </div>
                         </div>

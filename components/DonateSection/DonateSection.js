@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from 'react-toastify';
 import Modal from 'react-modal';
 import { MdCancel } from "react-icons/md";
+import { Router, useRouter } from 'next/router';
 
 const customStyles = {
     content: {
@@ -29,13 +30,10 @@ const customStyles = {
 
 const DonateSection = () => {
 
+
+    const router = useRouter()
     const BASE_URL = 'https://eganow-mc-checkout.vercel.app/api/credentials'
     const [loading, setLoading] = useState(false)
-
-    const [open, setOpen] = useState(false);
-
-    const onOpenModal = () => setOpen(true);
-    const onCloseModal = () => setOpen(false);
 
 
     // new modal
@@ -45,11 +43,6 @@ const DonateSection = () => {
 
     function openModal() {
         setIsOpen(true);
-    }
-
-    function afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        // subtitle.style.color = '#f00';
     }
 
     function closeModal() {
@@ -88,6 +81,21 @@ const DonateSection = () => {
         getData();
     }, [])
 
+    useEffect(() => {
+        const handlePaymentMessage = (event) => {
+          if (event.data === "successful") {
+            router.push("/payment_status?status=success");
+          } else if (event.data === "failed") {
+            router.push("/payment_status?status=failed");
+          }
+        };
+        window.addEventListener("message", handlePaymentMessage);
+    
+        return () => {
+          window.removeEventListener("message", handlePaymentMessage);
+        };
+    }, []);
+
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -102,14 +110,14 @@ const DonateSection = () => {
         e.preventDefault();
         setLoading(true)
         const postData = {
-            payerInfo: {
+            payer: {
                 first_name: formData.firstName,
                 last_name: formData.lastName,
                 email: formData.email,
                 mobile_number: formData.phone,
             },
-            customer_id: "4BDFB5479C224EE9",
-            callback_url: "http://localhost:3002/payment_status",
+            customer_id: "59B4F9195EC84D99",
+            callback_url: "http://localhost:3000/payment_status",
             amount: formData.amount,
             ip_address: ip,
             currency

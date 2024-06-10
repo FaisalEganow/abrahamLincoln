@@ -16,7 +16,7 @@ const Error = (props) => {
                     <div className="col col-xs-12">
                         <div className="content clearfix">
                             <div className="error">
-                                <Image src={erimg} alt=""/>
+                                {/* <Image src={erimg} alt=""/> */}
                             </div>
                             <div className="error-message">
                                 <h3>Oops! Page Not Found!</h3>
