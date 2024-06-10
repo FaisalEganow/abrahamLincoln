@@ -117,7 +117,7 @@ const DonateSection = () => {
                 mobile_number: formData.phone,
             },
             customer_id: "59B4F9195EC84D99",
-            callback_url: "http://localhost:3000/payment_status",
+            callback_url: "https://abralincolnfoundation.org/payment_status",
             amount: formData.amount,
             ip_address: ip,
             currency
