@@ -28,7 +28,7 @@ const PaymentStatus = () => {
         <Fragment>
             <Navbar Logo={Logo} hclass={'wpo-site-header-s5'} />
             <PageTitle pageTitle={'Donate'} pagesub={'Status'} />
-            <PaymentSuccess/>
+            <PaymentSuccess status={status}/>
             <Footer />
             <Scrollbar />
         </Fragment>
