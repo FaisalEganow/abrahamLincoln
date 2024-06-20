@@ -32,11 +32,9 @@ const DonateSection = () => {
 
 
     const router = useRouter()
-    const BASE_URL = 'https://eganow-mc-checkout.vercel.app/api/credentials'
+    // const BASE_URL = 'https://eganow-mc-checkout.vercel.app/api/credentials'
+    const BASE_URL = 'https://intergrated-checkout.vercel.app'
     const [loading, setLoading] = useState(false)
-
-
-    // new modal
 
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -55,7 +53,7 @@ const DonateSection = () => {
 
     const [ip, setIP] = useState("");
     const [checkoutUrl, setCheckoutUrl] = useState('');
-    const [currency, setCurrency] = useState('GHS');
+    const [currency, setCurrency] = useState('USD');
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -110,22 +108,29 @@ const DonateSection = () => {
         e.preventDefault();
         setLoading(true)
         const postData = {
-            payer: {
-                first_name: formData.firstName,
-                last_name: formData.lastName,
-                email: formData.email,
-                mobile_number: formData.phone,
-            },
-            customer_id: "59B4F9195EC84D99",
-            callback_url: "https://abralincolnfoundation.org/payment_status",
+            username: process.env.NEXT_PUBLIC_USERNAME,
+            password: process.env.NEXT_PUBLIC_PASSWORD,
+            x_auth: process.env.NEXT_PUBLIC_X_AUTH,
             amount: formData.amount,
-            ip_address: ip,
+            callback_url : "https://www.google.com",
             currency
+            // payer: {
+            //     first_name: formData.firstName,
+            //     last_name: formData.lastName,
+            //     email: formData.email,
+            //     mobile_number: formData.phone,
+            // },
+            // customer_id: "59B4F9195EC84D99",
+            // callback_url: "https://abralincolnfoundation.org/payment_status",
+            // amount: formData.amount,
+            // ip_address: ip,
+            // currency
         }
         try {
-            const sendRequest = await axios.post(`${BASE_URL}`, postData)
+            const sendRequest = await axios.post(`${BASE_URL}/api/credentials`, postData)
             if (sendRequest?.data?.public_key) {
-                const url = `https://eganow-mc-checkout.vercel.app/${sendRequest.data.public_key}`;
+                const url = `${BASE_URL}/${sendRequest.data.public_key}`;
+                // const url = `https://eganow-mc-checkout.vercel.app/${sendRequest.data.public_key}`;
                 setCheckoutUrl(url);
                 openModal()
                 setLoading(false)
@@ -150,7 +155,7 @@ const DonateSection = () => {
 
                                     <div className='d-flex p-2 gap-2 bg-white mb-4 justify-content-end'>
                                         <button type='button' className={`px-4 py-1 rounded border-0 outline-0 text-secondary  ${currency == 'USD' ? 'bg-success text-white shadow' : ''}`} onClick={() => changeCurrency('USD')}>USD</button>
-                                        <button type='button' className={`px-4 py-1 rounded border-0 outline-0 text-secondary ${currency == 'GHS' ? 'bg-success text-white  shadow' : ''}`} onClick={() => changeCurrency('GHS')}>GHS</button>
+                                        {/* <button type='button' className={`px-4 py-1 rounded border-0 outline-0 text-secondary ${currency == 'GHS' ? 'bg-success text-white  shadow' : ''}`} onClick={() => changeCurrency('GHS')}>GHS</button> */}
                                     </div>
 
                                     <h2>Your Donation</h2>
