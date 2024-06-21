@@ -32,8 +32,8 @@ const DonateSection = () => {
 
 
     const router = useRouter()
-    // const BASE_URL = 'https://eganow-mc-checkout.vercel.app/api/credentials'
-    const BASE_URL = 'https://intergrated-checkout.vercel.app'
+    // const BASE_URL = 'https://intergrated-checkout.vercel.app'
+    const BASE_URL = 'https://checkout.eganowpay.com/'
     const [loading, setLoading] = useState(false)
 
 
@@ -112,8 +112,10 @@ const DonateSection = () => {
             password: process.env.NEXT_PUBLIC_PASSWORD,
             x_auth: process.env.NEXT_PUBLIC_X_AUTH,
             amount: formData.amount,
-            callback_url : "https://www.google.com",
-            currency
+            callback_url : "https://abralincolnfoundation.org/payment_status",
+            currency,
+            payment_view_modal : "MODAL",
+            allowed_payment_method: "CARD"
             // payer: {
             //     first_name: formData.firstName,
             //     last_name: formData.lastName,
