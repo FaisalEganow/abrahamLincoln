@@ -154,13 +154,15 @@ const DonateSection = () => {
                                 <div className="wpo-donations-amount">
 
                                     <div className='d-flex p-2 gap-2 bg-white mb-4 justify-content-end'>
-                                        <button type='button' className={`px-4 py-1 rounded border-0 outline-0 text-secondary  ${currency == 'USD' ? 'bg-success text-white shadow' : ''}`} onClick={() => changeCurrency('USD')}>USD</button>
+                                        {/* <button type='button' className={`px-4 py-1 rounded border-0 outline-0 text-secondary  ${currency == 'USD' ? 'bg-success text-white shadow' : ''}`} onClick={() => changeCurrency('USD')}>USD</button> */}
                                         {/* <button type='button' className={`px-4 py-1 rounded border-0 outline-0 text-secondary ${currency == 'GHS' ? 'bg-success text-white  shadow' : ''}`} onClick={() => changeCurrency('GHS')}>GHS</button> */}
                                     </div>
 
                                     <h2>Your Donation</h2>
-                                    <input className="form-control" type="text" required name="amount" id="text"
-                                        placeholder="Enter Donation Amount" value={formData.amount} onChange={handleInputChange} />
+                                    <div className='d-flex gap-2'>
+                                        <input className="border-success bg-white fw-bold text-success w-25 text-center form-control" type="text" disabled id="text" value={'USD'} />
+                                        <input className="form-control" type="text" required name="amount" id="text"placeholder="Enter Donation Amount" value={formData.amount} onChange={handleInputChange} />
+                                    </div>
                                 </div>
                                 <div className="wpo-donations-details">
                                     <h2>Details</h2>
