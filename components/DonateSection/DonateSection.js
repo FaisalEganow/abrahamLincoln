@@ -112,7 +112,7 @@ const DonateSection = () => {
             password: process.env.NEXT_PUBLIC_PASSWORD,
             x_auth: process.env.NEXT_PUBLIC_X_AUTH,
             amount: formData.amount,
-            callback_url : "https://abralincolnfoundation.org/payment_status",
+            callback_url : "https://abralincolnfoundation.org",
             currency,
             payment_view_modal : "MODAL",
             allowed_payment_method: "CARD"
