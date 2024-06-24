@@ -14,13 +14,13 @@ const FunFact = (props) => {
                                     Campaigns</p>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+                        {/* <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div className="info">
                                 <h3><span><CountUp end={26} enableScrollSpy />M</span></h3>
                                 <p>Total
                                     Fund Raised</p>
                             </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                             <div className="info">
                                 <h3><span><CountUp end={120} enableScrollSpy /></span></h3>
