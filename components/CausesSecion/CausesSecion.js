@@ -30,16 +30,16 @@ const CausesSecion = (props) => {
                                 </div>
                                 <div className="progress-item"> 
                                     <div className="progress">
-                                        <div className="bar" style={{ width: '90%' }}>
+                                        <div className="bar" style={{ width: '40%' }}>
                                         </div>
                                     </div>
-                                    <span className="cssProgress-label">90%</span>
+                                    <span className="cssProgress-label">40%</span>
                                     <div className="progres-label">
                                         <div className="label-on">
-                                            <p>Raised:<span>$24,808.00</span></p>
+                                            {/* <p>Raised:<span>$24,808.00</span></p> */}
                                         </div>
                                         <div className="label-two">
-                                            <p>Goal:<span>$26,000.00</span></p>
+                                            {/* <p>Goal:<span>$26,000.00</span></p> */}
                                         </div>
                                     </div>
                                 </div>
