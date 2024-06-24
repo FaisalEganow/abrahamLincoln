@@ -104,7 +104,7 @@ const Footer = (props) => {
                                 <ul className="info">
                                     <li className='d-flex'><i className="flaticon-email"></i> abrahamyeswecan@ymail.com</li>
                                     <li><i className="flaticon-telephone"></i>+233 243 050 630</li>
-                                    <li><i className="flaticon-location"></i>N°48 Osu Badu Street, Dzorwulo, Accra.  P.O.Box GP 22628</li>
+                                    <li><i className="flaticon-location"></i> N°48 Osu Badu Street, Dzorwulo, Accra.  P.O.Box GP 22628</li>
                                 </ul>
                             </div>
                         </div>
