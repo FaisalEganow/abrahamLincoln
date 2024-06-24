@@ -69,16 +69,6 @@ const DonateSection = () => {
 
     }
 
-    const getData = async () => {
-        const res = await axios.get("https://api.ipify.org/?format=json");
-        setIP(res.data.ip);
-    };
-
-    useEffect(() => {
-        //passing getData method to the lifecycle method
-        getData();
-    }, [])
-
     useEffect(() => {
         const handlePaymentMessage = (event) => {
           if (event.data === "successful") {
@@ -114,14 +104,13 @@ const DonateSection = () => {
             amount: formData.amount,
             callback_url : "https://abralincolnfoundation.org",
             currency,
-            payment_view_mod : "MODAL",
+            payment_view_mode : "MODAL",
             allowed_payment_method: "CARD"
         }
         try {
             const sendRequest = await axios.post(`${BASE_URL}/api/credentials`, postData)
             if (sendRequest?.data?.public_key) {
                 const url = `${BASE_URL}/${sendRequest.data.public_key}`;
-                // const url = `https://eganow-mc-checkout.vercel.app/${sendRequest.data.public_key}`;
                 setCheckoutUrl(url);
                 openModal()
                 setLoading(false)
@@ -129,7 +118,7 @@ const DonateSection = () => {
                 toast.warning('Something went wrong , Retry')
             }
         } catch (error) {
-            console.log(error);
+            console.error(error);
             setLoading(false)
         }
     };
