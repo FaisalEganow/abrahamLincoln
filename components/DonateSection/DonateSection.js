@@ -114,7 +114,7 @@ const DonateSection = () => {
             amount: formData.amount,
             callback_url : "https://abralincolnfoundation.org",
             currency,
-            payment_view_modal : "MODAL",
+            payment_view_mod : "MODAL",
             allowed_payment_method: "CARD"
         }
         try {
